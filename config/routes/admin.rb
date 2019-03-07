@@ -238,4 +238,8 @@ namespace :admin do
     resources :cards
     resources :feeds, only: [:update]
   end
+
+  get 'download_settings/:resource', to: 'download_settings#edit', as: 'edit_download_settings'
+  post 'download_settings/:resource', to: 'download_settings#update', as: 'update_download_settings'
+
 end

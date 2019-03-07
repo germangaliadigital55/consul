@@ -2,6 +2,7 @@ class Budget < ActiveRecord::Base
 
   include Measurable
   include Sluggable
+  extend DownloadSettings::BudgetCsv
 
   translates :name, touch: true
   include Globalizable

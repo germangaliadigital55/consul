@@ -1,0 +1,33 @@
+<% unless @download_settings.empty? %>
+  <% provide(:title) do %>
+    <%= t("admin.header.title") %> - <%= t("download.edit.#{@resource}") %>
+  <% end %>
+
+  <h2><%= t("download.edit.#{@resource}") %></h2>
+
+  <%= form_tag url: admin_update_download_settings_path(resource: @resource) do %>
+    <table>
+      <thead>
+      <tr>
+        <th><%= t("download.edit.fields") %></th>
+        <th><%= t("download.edit.description") %></th>
+        <th><%= t("download.edit.downloadable") %></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @download_settings.each do |attr| %>
+        <tr>
+          <td><%= attr.name_field %></td>
+          <td><%= t("download.fielddescription.#{@resource}.#{attr.name_field}", default: "") %></td>
+          <td><%= check_box_tag "downloadable[]", attr.name_field, attr.downloadable, class: "download_settings_check_box" %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <div class="small-12 medium-3 column clear end">
+      <%= submit_tag t("download.edit.submit"), class: "button success expanded" %>
+    </div>
+  <% end %>
+<% end %>
+

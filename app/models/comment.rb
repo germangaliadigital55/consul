@@ -3,6 +3,7 @@ class Comment < ActiveRecord::Base
   include HasPublicAuthor
   include Graphqlable
   include Notifiable
+  extend DownloadSettings::CommentCsv
 
   COMMENTABLE_TYPES = %w(Debate Proposal Budget::Investment Poll Topic Legislation::Question
                         Legislation::Annotation Legislation::Proposal).freeze

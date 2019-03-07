@@ -1,0 +1,48 @@
+en:
+  download:
+    edit:
+      fields: "Fields"
+      description: "Description"
+      downloadable: "Downloadable"
+      debates: "Debates"
+      proposals: "Proposals"
+      legislation_processes: "Legislation process"
+      budget_investments: "Participatory budgeting"
+      comments: "Comments"
+      submit: "Save changes"
+    fielddescription:
+      debates:
+        id: "Identification Number"
+        title: "Title"
+        description: "Description"
+        author_id: "Author Identification Number"
+        created_at: "Created at"
+        updated_at: "Updated at"
+        hidden_at: "Hidden at"
+      proposals:
+        id: "Identification Number"
+        title: "Title"
+        description: "Description"
+        author_id: "Author Identification Number"
+        created_at: "Created at"
+        updated_at: "Updated at"
+        hidden_at: "Hidden at"
+      legislation_processes:
+        id: "Identification Number"
+        title: "Title"
+        description: "Description"
+        author_id: "Author Identification Number"
+        created_at: "Created at"
+        updated_at: "Updated at"
+        hidden_at: "Hidden at"
+      budget_investments:
+        id: "Identification Number"
+        created_at: "Created at"
+        updated_at: "Updated at"
+        hidden_at: "Hidden at"
+      comments:
+        id: "Identification Number"
+        author_id: "Author Identification Number"
+        created_at: "Created at"
+        updated_at: "Updated at"
+        hidden_at: "Hidden at"

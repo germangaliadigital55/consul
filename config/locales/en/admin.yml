@@ -644,6 +644,13 @@ en:
       title_booths: Voting booths
       legislation: Collaborative Legislation
       users: Users
+      download_settings:
+        title: "Download settings"
+        debates: "Debates"
+        proposals: "Proposals"
+        legislation_processes: "Legislation process"
+        budget_investments: "Participatory budgeting"
+        comments: "Comments"
     administrators:
       index:
         title: Administrators

@@ -22,6 +22,7 @@ class Proposal < ActiveRecord::Base
   include Relationable
   include Milestoneable
   include Randomizable
+  extend DownloadSettings::ProposalCsv
 
   acts_as_votable
   acts_as_paranoid column: :hidden_at

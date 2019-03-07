@@ -18,6 +18,7 @@ class Legislation::Process < ActiveRecord::Base
   translates :milestones_summary, touch: true
   translates :homepage,           touch: true
   include Globalizable
+  extend DownloadSettings::LegislationProcessCsv
 
   PHASES_AND_PUBLICATIONS = %i[homepage_phase draft_phase debate_phase allegations_phase
                                proposals_phase draft_publication result_publication].freeze

@@ -643,6 +643,13 @@ es:
       title_booths: Urnas de votación
       legislation: Legislación colaborativa
       users: Usuarios
+      download_settings:
+        title: "Configuración de descarga"
+        debates: "Debates"
+        proposals: "Propuestas"
+        legislation_processes: "Procesos legislativos"
+        budget_investments: "Pressupuestos participativos"
+        comments: "Comentarios"
     administrators:
       index:
         title: Administradores

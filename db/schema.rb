@@ -497,12 +497,14 @@ ActiveRecord::Schema.define(version: 20190306132407) do
   add_index "documents", ["user_id"], name: "index_documents_on_user_id", using: :btree
 
   create_table "download_settings", force: :cascade do |t|
-    t.string   "modal_name",                   null: false
-    t.string   "field_name",                   null: false
+    t.string   "name_model",                   null: false
+    t.string   "name_field",                   null: false
     t.boolean  "downloadable", default: false, null: false
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
   end
+
+  add_index "download_settings", ["name_model", "name_field"], name: "index_download_settings_on_name_model_and_name_field", unique: true, using: :btree
 
   create_table "failed_census_calls", force: :cascade do |t|
     t.integer  "user_id"

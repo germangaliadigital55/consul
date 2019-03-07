@@ -13,6 +13,7 @@ class Debate < ActiveRecord::Base
   include Relationable
   include Notifiable
   include Randomizable
+  extend DownloadSettings::DebateCsv
 
   acts_as_votable
   acts_as_paranoid column: :hidden_at

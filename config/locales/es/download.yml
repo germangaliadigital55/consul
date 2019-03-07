@@ -1,0 +1,47 @@
+es:
+  download:
+    edit:
+      fields: "Campos"
+      description: "Descripción"
+      downloadable: "Descargable"
+      debates: "Debates"
+      proposals: "Propuestas"
+      legislation_processes: "Procesos legislativos"
+      budget_investments: "Pressupuestos participativos"
+      comments: "Comentarios"
+      submit: "Guardar cambios"
+    fielddescription:
+      debates:
+        id: "Número de Identificación"
+        title: "Título"
+        description: "Descripción"
+        author_id: "Número de Identificación del Autor"
+        created_at: "Creado el"
+        updated_at: "Actualizado el"
+        hidden_at: "Ocultado el"
+      proposals:
+        id: "Número de Identificación"
+        title: "Título"
+        description: "Descripción"
+        author_id: "Número de Identificación del Autor"
+        created_at: "Creado el"
+        updated_at: "Actualizado el"
+        hidden_at: "Ocultado el"
+      legislation_processes:
+        id: "Número de Identificación"
+        title: "Título"
+        description: "Descripción"
+        author_id: "Número de Identificación del Autor"
+        created_at: "Creado el"
+        updated_at: "Actualizado el"
+        hidden_at: "Ocultado el"
+      budgets:
+        id: "Número de Identificación"
+        created_at: "Creado el"
+        updated_at: "Actualizado el"
+        hidden_at: "Ocultado el"
+      comments:
+        id: "Número de Identificación"
+        created_at: "Creado el"
+        updated_at: "Actualizado el"
+        hidden_at: "Ocultado el"
