@@ -11,6 +11,10 @@ class Admin::DebatesController < Admin::BaseController
     @debates = Debate.only_hidden.send(@current_filter).order(hidden_at: :desc).page(params[:page])
   end
 
+  def list
+    @debates = Debate.all.page(params[:page])
+  end
+
   def confirm_hide
     @debate.confirm_hide
     redirect_to request.query_parameters.merge(action: :index)

@@ -643,6 +643,8 @@ es:
       title_booths: Urnas de votación
       legislation: Legislación colaborativa
       users: Usuarios
+      debates: "Debates"
+      comments: "Comentarios"
       download_settings:
         title: "Configuración de descarga"
         debates: "Debates"

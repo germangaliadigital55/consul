@@ -9,6 +9,23 @@
       </li>
     <% end %>
 
+    <% if feature?(:debates) %>
+      <li class="section-title">
+        <%= link_to list_admin_debates_path do %>
+          <span class="icon-debates"></span>
+          <strong><%= t("admin.menu.debates") %></strong>
+        <% end %>
+      </li>
+    <% end %>
+
+
+    <li class="section-title">
+      <%= link_to admin_comments_path do %>
+        <span class="icon-comments"></span>
+        <strong><%= t("admin.menu.comments") %></strong>
+      <% end %>
+    </li>
+
     <% if feature?(:polls) %>
       <li class="section-title">
         <a href="#">
@@ -21,7 +38,7 @@
           </li>
 
           <li <%= "class=is-active" if %w(questions answers).include?(controller_name) ||
-                                    controller.class.parent == Admin::Poll::Questions::Answers %>>
+            controller.class.parent == Admin::Poll::Questions::Answers %>>
             <%= link_to t("admin.menu.poll_questions"), admin_questions_path %>
           </li>
         </ul>
@@ -57,19 +74,19 @@
         </li>
 
         <li <%= "class=is-active" if controller_name == "booths" &&
-                                  action_name != "available" %>>
+          action_name != "available" %>>
           <%= link_to t("admin.menu.poll_booths"), admin_booths_path %>
         </li>
 
         <li <%= "class=is-active" if (controller_name == "polls" &&
-                                      action_name == "booth_assignments") ||
-                                      controller_name == "booth_assignments" &&
-                                      action_name == "manage" %>>
+          action_name == "booth_assignments") ||
+          controller_name == "booth_assignments" &&
+            action_name == "manage" %>>
           <%= link_to t("admin.menu.poll_booth_assignments"), booth_assignments_admin_polls_path %>
         </li>
 
         <li <%= "class=is-active" if %w(shifts booths).include?(controller_name) &&
-                                  %w(available new).include?(action_name) %>>
+          %w(available new).include?(action_name) %>>
           <%= link_to t("admin.menu.poll_shifts"), available_admin_booths_path %>
         </li>
       </ul>
@@ -118,7 +135,7 @@
         <strong><%= t("admin.menu.title_site_customization") %></strong>
       </a>
       <ul <%= "class=is-active" if menu_customization? &&
-                                   controller.class.parent != Admin::Poll::Questions::Answers %>>
+        controller.class.parent != Admin::Poll::Questions::Answers %>>
 
         <li <%= "class=is-active" if menu_homepage? %>>
           <%= link_to t("admin.menu.site_customization.homepage"), admin_homepage_path %>
@@ -160,7 +177,7 @@
         <% end %>
 
         <% if feature?(:debates) %>
-          <li <%= "class=is-active" if controller_name == "debates" %>>
+          <li <%= "class=is-active" if controller_name == "debates" && action_name == "index" %>>
             <%= link_to t("admin.menu.hidden_debates"), admin_debates_path %>
           </li>
         <% end %>
@@ -208,7 +225,7 @@
         </li>
 
         <li <%= "class=is-active" if controller_name == "moderators" %>>
-          <%= link_to t("admin.menu.moderators"), admin_moderators_path%>
+          <%= link_to t("admin.menu.moderators"), admin_moderators_path %>
         </li>
 
         <li <%= "class=is-active" if controller_name == "valuators" %>>
@@ -235,7 +252,7 @@
         <span class="icon-angle-down"></span>
         <strong><%= t("admin.menu.download_settings.title") %></strong>
       </a>
-      <ul <%="class=is-active" if controller_name == "download_settings" %>>
+      <ul <%= "class=is-active" if controller_name == "download_settings" %>>
 
         <% if feature?(:debates) %>
           <li <%= "class=is-active" if !@resource.nil? && @resource == "debates" %>>
@@ -273,7 +290,7 @@
         <span class="icon-settings"></span>
         <strong><%= t("admin.menu.title_settings") %></strong>
       </a>
-      <ul <%="class=is-active" if menu_settings? %>>
+      <ul <%= "class=is-active" if menu_settings? %>>
         <li <%= "class=is-active" if controller_name == "settings" %>>
           <%= link_to t("admin.menu.settings"), admin_settings_path %>
         </li>
@@ -287,12 +304,12 @@
         </li>
 
         <li <%= "class=is-active" if controller_name == "images" &&
-                                  controller.class.parent != Admin::Poll::Questions::Answers %>>
+          controller.class.parent != Admin::Poll::Questions::Answers %>>
           <%= link_to t("admin.menu.site_customization.images"), admin_site_customization_images_path %>
         </li>
 
         <li <%= "class=is-active" if controller_name == "content_blocks" %>>
-          <%= link_to t("admin.menu.site_customization.content_blocks"), admin_site_customization_content_blocks_path%>
+          <%= link_to t("admin.menu.site_customization.content_blocks"), admin_site_customization_content_blocks_path %>
         </li>
       </ul>
     </li>

@@ -644,6 +644,8 @@ en:
       title_booths: Voting booths
       legislation: Collaborative Legislation
       users: Users
+      debates: "Debates"
+      comments: "Comments"
       download_settings:
         title: "Download settings"
         debates: "Debates"

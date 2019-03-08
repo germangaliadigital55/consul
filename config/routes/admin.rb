@@ -23,6 +23,7 @@ namespace :admin do
   end
 
   resources :debates, only: :index do
+    get :list, on: :collection
     member do
       put :restore
       put :confirm_hide
