@@ -22,13 +22,14 @@ namespace :admin do
     end
   end
 
-  resources :debates, only: :index do
-    get :list, on: :collection
+  resources :hidden_debates, only: :index do
     member do
       put :restore
       put :confirm_hide
     end
   end
+
+  resources :debates, only: :index
 
   resources :proposals, only: [:index, :show] do
     resources :milestones, controller: "proposal_milestones"
@@ -84,12 +85,14 @@ namespace :admin do
     collection { get :search }
   end
 
-  resources :comments, only: :index do
+  resources :hidden_comments, only: :index do
     member do
       put :restore
       put :confirm_hide
     end
   end
+
+  resources :comments, only: :index
 
   resources :tags, only: [:index, :create, :update, :destroy]
 

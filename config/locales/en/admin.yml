@@ -357,6 +357,20 @@ en:
           all: All
           with_confirmed_hide: Confirmed
           without_confirmed_hide: Pending
+        id: "ID"
+        content: "Content"
+        author: "Author"
+        commentable_type: "Type"
+        link: "Link"
+        title: Comments
+        no_comments: There is no comments.
+    hidden_comments:
+      index:
+        filter: Filter
+        filters:
+          all: All
+          with_confirmed_hide: Confirmed
+          without_confirmed_hide: Pending
         hidden_debate: Hidden debate
         hidden_proposal: Hidden proposal
         title: Hidden comments
@@ -367,6 +381,17 @@ en:
         title: Administration
         description: Welcome to the %{org} admin panel.
     debates:
+      index:
+        id: ID
+        author: Author
+        filter: Filter
+        filters:
+          all: All
+          with_confirmed_hide: Confirmed
+          without_confirmed_hide: Pending
+        title: Debates
+        no_debates: There is no debates.
+    hidden_debates:
       index:
         filter: Filter
         filters:
@@ -1214,6 +1239,12 @@ en:
       proposal_search:
         button: Search
         placeholder: Search proposals by title, code, description or question
+      debate_search:
+        button: Buscar
+        placeholder: Search proposals by title, code or description
+      comment_search:
+        button: Buscar
+        placeholder: Search proposals by content, author or type
       spending_proposal_search:
         button: Search
         placeholder: Search spending proposals by title or description

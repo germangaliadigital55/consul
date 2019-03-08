@@ -18,7 +18,7 @@ module CommentableActions
     @tag_cloud = tag_cloud
     @banners = Banner.in_section(section(resource_model.name)).with_active
 
-    set_resource_votes(@resources)
+    set_resource_votes(@resources) unless resource_name == "comment"
 
     set_resources_instance
   end

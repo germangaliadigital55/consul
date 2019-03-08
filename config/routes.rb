@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+  get 'hidden_comments/index'
+  end
+
+  namespace :admin do
+  get 'hidden_debates/index'
+  end
+
   mount Ckeditor::Engine => '/ckeditor'
 
   if Rails.env.development? || Rails.env.staging?

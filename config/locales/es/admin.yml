@@ -357,6 +357,20 @@ es:
           all: Todos
           with_confirmed_hide: Confirmados
           without_confirmed_hide: Pendientes
+        id: "ID"
+        content: "Contenido"
+        author: "Autor"
+        commentable_type: "Tipo"
+        link: "Link"
+        title: Comentarios
+        no_comments: No hay comentarios.
+    hidden_comments:
+      index:
+        filter: Filtro
+        filters:
+          all: Todos
+          with_confirmed_hide: Confirmados
+          without_confirmed_hide: Pendientes
         hidden_debate: Debate oculto
         hidden_proposal: Propuesta oculta
         title: Comentarios ocultos
@@ -367,6 +381,17 @@ es:
         title: Administración
         description: Bienvenido al panel de administración de %{org}.
     debates:
+      index:
+        id: ID
+        author: Autor
+        filter: Filtro
+        filters:
+          all: Todos
+          with_confirmed_hide: Confirmados
+          without_confirmed_hide: Pendientes
+        title: Debates
+        no_debates: No hay debates.
+    hidden_debates:
       index:
         filter: Filtro
         filters:
@@ -1213,6 +1238,12 @@ es:
       proposal_search:
         button: Buscar
         placeholder: Buscar propuestas por título, código, descripción o pregunta
+      debate_search:
+        button: Buscar
+        placeholder: Buscar debates por título, código o descripción
+      comment_search:
+        button: Buscar
+        placeholder: Buscar comentarios por contenido, autor o tipo
       spending_proposal_search:
         button: Buscar
         placeholder: Buscar propuestas por título o descripción
