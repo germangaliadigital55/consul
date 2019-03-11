@@ -1,4 +1,6 @@
 require 'numeric'
+require 'csv'
+
 class Debate < ActiveRecord::Base
   include Rails.application.routes.url_helpers
   include Flaggable
@@ -156,4 +158,5 @@ class Debate < ActiveRecord::Base
     orders << "recommendations" if Setting['feature.user.recommendations_on_debates'] && user&.recommended_debates
     return orders
   end
+
 end

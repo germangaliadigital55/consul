@@ -499,7 +499,6 @@ en:
           title: Proposals
           back: Back
           id: Id
-          title: Title
           supports: Total supports
           select: Select
           selected: Selected

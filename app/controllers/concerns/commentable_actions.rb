@@ -21,6 +21,11 @@ module CommentableActions
     set_resource_votes(@resources) unless resource_name == "comment"
 
     set_resources_instance
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data resource_model.to_csv(@resources) }
+    end
   end
 
   def show

@@ -52,6 +52,8 @@ class DebatesController < ApplicationController
     end
   end
 
+
+
   private
 
     def debate_params
